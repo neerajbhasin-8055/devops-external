@@ -6,17 +6,15 @@ jobs:
   test:
     runs-on: windows-latest
     steps:
-      
       - uses: actions/checkout@v4
 
-      
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
 
-      s
+
       - run: pip install pytest
 
       
       - name: Run tests
-        run: pytest ./test_app.py --capture=no
+        run: pytest -s ./test_app.py
